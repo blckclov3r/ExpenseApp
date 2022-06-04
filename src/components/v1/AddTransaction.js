@@ -25,7 +25,7 @@ export default function AddTransaction() {
     
     return (
         <>
-            <h3 className='mt-4'>Add new Transaction</h3>
+            <h3 className='mt-2'>Add new Transaction</h3>
             <form onSubmit={addTransactionSubmit}>
                 <div >
                     <div className='mb-3'>

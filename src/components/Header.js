@@ -2,6 +2,7 @@
 
 import React from 'react'
 import {   Container, Nav, Navbar } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
@@ -11,9 +12,8 @@ export default function Header() {
              <Container>
              <Navbar.Brand href="#home">ExpenseApp</Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
+                    <Link className='nav-link' to="v1">Version1</Link>
+                    <Link className='nav-link' to="v2">Version2</Link>
                 </Nav>
                 <Nav className="ms-auto">
                 </Nav>

@@ -2,8 +2,8 @@
 
 import React, { useContext } from 'react'
 import { Card } from 'react-bootstrap'
+import { currencyFormatter } from '../utils';
 import { GlobalContext } from './context/GlobalState';
-
 export default function Income() {
   const {transactions} = useContext(GlobalContext);
 
@@ -19,7 +19,7 @@ export default function Income() {
     <Card.Body>
         <Card.Title className='text-success'>Income</Card.Title>
         <Card.Text>
-            ${totalIncome.toFixed(2)}
+            {currencyFormatter.format(totalIncome)}
         </Card.Text>
     </Card.Body>
 </Card>

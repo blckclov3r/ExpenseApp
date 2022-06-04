@@ -2,6 +2,7 @@
 
 import React, { useContext } from 'react'
 import { Card } from 'react-bootstrap'
+import { currencyFormatter } from '../utils';
 import { GlobalContext } from './context/GlobalState';
 
 
@@ -19,7 +20,7 @@ export default function Expenses() {
     <Card.Body>
         <Card.Title className='text-danger'>Expenses</Card.Title>
         <Card.Text>
-           ${totalExpense * -1}
+           {currencyFormatter.format(totalExpense * -1)}
         </Card.Text>
     </Card.Body>
 </Card>

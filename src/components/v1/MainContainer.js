@@ -17,13 +17,13 @@ export default function MainContainer() {
                 <Col md={8}>
                 <h3 className='mt-4'>Overview</h3>
                     <Row className='my-4 gx-2'>
-                        <Col md={4} xs={12} >
+                        <Col md={4} xs={12} className="mb-2" >
                             <Balance />
                         </Col>
-                        <Col md={4} xs={12} >
+                        <Col md={4} xs={12} className="mb-2" >
                             <Income />
                         </Col>
-                        <Col md={4} xs={12} >
+                        <Col md={4} xs={12} className="mb-2" >
                             <Expenses />
                         </Col>
                     </Row>

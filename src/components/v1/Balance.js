@@ -3,8 +3,8 @@
 
 import React, { useContext } from 'react'
 import { Card } from 'react-bootstrap'
+import { currencyFormatter } from '../utils';
 import { GlobalContext } from './context/GlobalState'
-
 export default function Balance() {
   const {transactions} =  useContext(GlobalContext);
 
@@ -19,7 +19,8 @@ export default function Balance() {
       <Card.Body>
         <Card.Title className='text-info'>Balance</Card.Title>
         <Card.Text>
-          ${total.toFixed(2)}
+          {currencyFormatter.format(total)}
+          
         </Card.Text>
       </Card.Body>
     </Card>
