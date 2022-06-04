@@ -2,7 +2,7 @@ body{
     background-attachment: fixed;
     font: 1rem open sans,sans-serif;
     height: 100%;
-  
+    background-image: url(../public/img/bgslash.png);
 }
 
 .App{
