@@ -1,7 +1,7 @@
 import { KEY } from "./GlobalState";
 
 
-export default (state,action) => {
+const AppReducer =  (state,action) => {
     switch(action.type){
         
         case KEY.DELETE_TRANSACTION :{
@@ -17,7 +17,6 @@ export default (state,action) => {
                 ...state,
                 transactions: [action.payload,...state.transactions]
             }
-            return;
         }
         
            
@@ -28,3 +27,4 @@ export default (state,action) => {
     }
 }
 
+export default AppReducer;
