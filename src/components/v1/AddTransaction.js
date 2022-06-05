@@ -38,7 +38,7 @@ export default function AddTransaction() {
                     </div>
                     <div className='mb-3'>
                         <label htmlFor='amount' className='form-label'>Amount</label>
-                        <input type="number" required value={amount} onChange={(e)=>setAmount(e.target.value)} id='amount' className='form-control' placeholder="Amount" />
+                        <input type="number" min={0} step={0.01} required value={amount} onChange={(e)=>setAmount(e.target.value)} id='amount' className='form-control' placeholder="Amount" />
                     </div>
                     <button className="btn btn-primary mb-3">Add Transaction</button>
                 </div>

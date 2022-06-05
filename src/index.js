@@ -8,10 +8,7 @@ import { BudgetProvider } from './components/v2/context/BudgetContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     <BudgetProvider>
     <App />
     </BudgetProvider>
-
-  </React.StrictMode>
 );
