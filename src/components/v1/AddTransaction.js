@@ -13,6 +13,10 @@ export default function AddTransaction() {
     const addTransactionSubmit = (e) =>{
         e.preventDefault();
 
+        if(text.trim() === '' || amount.trim() === ''){
+            return;
+        }
+
         const newTransaction = {
             id: uuid(),
             text: text,
@@ -30,11 +34,11 @@ export default function AddTransaction() {
                 <div >
                     <div className='mb-3'>
                         <label htmlFor='text' className='form-label'>Text</label>
-                        <input type="text" id='text' value={text} onChange={(e)=>{setText(e.target.value)}} className='form-control' placeholder="Text" />
+                        <input type="text" id='text' required value={text} onChange={(e)=>{setText(e.target.value)}} className='form-control' placeholder="Text" />
                     </div>
                     <div className='mb-3'>
                         <label htmlFor='amount' className='form-label'>Amount</label>
-                        <input type="number" value={amount} onChange={(e)=>setAmount(e.target.value)} id='amount' className='form-control' placeholder="Amount" />
+                        <input type="number" required value={amount} onChange={(e)=>setAmount(e.target.value)} id='amount' className='form-control' placeholder="Amount" />
                     </div>
                     <button className="btn btn-primary mb-3">Add Transaction</button>
                 </div>

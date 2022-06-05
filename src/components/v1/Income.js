@@ -4,6 +4,7 @@ import React, { useContext } from 'react'
 import { Card } from 'react-bootstrap'
 import { currencyFormatter } from '../utils';
 import { GlobalContext } from './context/GlobalState';
+
 export default function Income() {
   const {transactions} = useContext(GlobalContext);
 
