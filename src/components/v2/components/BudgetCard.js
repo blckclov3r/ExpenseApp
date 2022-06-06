@@ -20,7 +20,7 @@ export default function BudgetCard({name, amount, max, onAddExpenseClick, gray, 
        classNames.push('bg-danger','bg-opacity-10','shadow-sm');
    }
    else if(gray){
-    classNames.push('bg-warning','bg-opacity-10','shadow-sm');
+    classNames.push('bg-light','bg-opacity-10','shadow-sm');
    }
    else{
       classNames.push('shadow-sm');

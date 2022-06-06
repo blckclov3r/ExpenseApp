@@ -35,7 +35,7 @@ export default function ViewExpensesModal({ budgetId, handleClose }) {
          </Stack>
       </Modal.Body>
       <Modal.Footer>
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-between gap-2">
           { (budgetId !== KEY.UNCATEGORIZED) && <Button variant="danger" type='submit' onClick={()=>{
               deleteBudget(budget)
               handleClose()
