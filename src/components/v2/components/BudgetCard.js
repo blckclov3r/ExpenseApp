@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, ProgressBar, Stack, Button } from 'react-bootstrap'
 import { currencyFormatter } from '../../utils'
 
-export default function BudgetCard({name, amount, max, onAddExpenseClick}) {
+export default function BudgetCard({name, amount, max, onAddExpenseClick, gray, hideBtn,viewExpenseClick}) {
 
    const getProgressbar = (amount, max) =>{
         const ratio = (amount/max);
@@ -18,30 +18,35 @@ export default function BudgetCard({name, amount, max, onAddExpenseClick}) {
    const classNames = [];
    if(parseInt(amount) > parseInt(max)){
        classNames.push('bg-danger','bg-opacity-10','shadow-sm');
-   }else{
-      classNames.push('bg-light','shadow-sm');
+   }
+   else if(gray){
+    classNames.push('bg-warning','bg-opacity-10','shadow-sm');
+   }
+   else{
+      classNames.push('shadow-sm');
    }
    
 
   return (
     <>
-        <Card className='bg-light'>
+        <Card>
             <Card.Body className={classNames.join(' ')}>
                 <Card.Title className='d-flex align-items-baseline fw-normal'>
                     <div className='me-auto'>{name}</div>
                     <div className='ms-auto d-flex align-items-baseline'>
-                        {currencyFormatter.format(amount)} /
-                        <span className='text-mutes fs-6 ms-1'>{currencyFormatter.format(max)}</span></div>
+                        <span className='me-1'> {currencyFormatter.format(amount)} </span>
+                    { !isNaN(max) &&  <span className='text-mutes fs-6'>/ {currencyFormatter.format(max)}</span> }
+                     </div>
                 </Card.Title>
-                <ProgressBar className='round-pill' variant={getProgressbar(amount,max)} 
+               { name !=="Uncategorized" && <ProgressBar className='round-pill' variant={getProgressbar(amount,max)} 
                     min={0}
                     max={max}
                     now={amount}
-                />
-                <Stack direction='horizontal' className='mt-4'>
-                    <Button variant="outline-danger" className="ms-auto" onClick={onAddExpenseClick}>Add Expense</Button>
-                    <Button variant="outline-primary  ms-2" >View Expenses</Button>
-                </Stack>
+                /> }
+               { !hideBtn &&  <Stack direction='horizontal' className='mt-4'>
+                    <Button variant="danger" className="ms-auto" onClick={onAddExpenseClick}>Add Expense</Button>
+                    <Button variant="primary  ms-2" onClick={viewExpenseClick}>View Expenses</Button>
+                </Stack>}
                 
             </Card.Body>
         </Card>

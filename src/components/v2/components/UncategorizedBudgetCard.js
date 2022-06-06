@@ -4,7 +4,7 @@ import React from 'react'
 import { KEY, useBudgets } from '../context/BudgetContext'
 import BudgetCard from './BudgetCard'
 
-export default function UncategorizedBudgetCard(props) {
+export default function UncategorizedBudgetCard(prop) {
  
    const {getBudgetExpenses} = useBudgets();
    
@@ -13,6 +13,6 @@ export default function UncategorizedBudgetCard(props) {
    },0)
    if(amount === 0) return null
   return (
-     <BudgetCard name="Uncategorized" amount={amount}  {...props} />
+     <BudgetCard name="Uncategorized" gray amount={amount} {...prop} />
   )
 }

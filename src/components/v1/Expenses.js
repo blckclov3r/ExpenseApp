@@ -20,7 +20,7 @@ export default function Expenses() {
     <Card.Body>
         <Card.Title className='text-danger'>Expenses</Card.Title>
         <Card.Text>
-           {currencyFormatter.format(totalExpense * -1)}
+           {currencyFormatter.format(Math.abs(totalExpense))}
         </Card.Text>
     </Card.Body>
 </Card>
