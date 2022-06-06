@@ -9,12 +9,14 @@ export default function TransactionList() {
 
     return (
         <>
-            <h3 className='mt-4'>History</h3>
-            <ul className='list-group mb-4'>
+            <div id='transactionList' className='h-100' >
+            <ul className='list-group mb-4' >
                 {transactions.map((item)=>(
                     <Transaction key={item.id} item={item} />
                 ))}
             </ul>
+            </div>
+           
         </>
     )
 }

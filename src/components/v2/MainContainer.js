@@ -26,7 +26,7 @@ export default function MainContainer() {
 
   return (
     <>
-      <Container className='mt-4'>
+      <Container className='my-4'>
         <Stack direction="horizontal" gap="2" className='mb-4'>
           <h3 className='me-auto'>Budgets</h3>
           <Button variant="primary" className="ms-auto" onClick={() => { setBudgetModal(true) }}>Add Budget</Button>
@@ -64,7 +64,7 @@ export default function MainContainer() {
 
       <ViewExpensesModal
         budgetId={viewExpenseModalBudgetId}
-        handleClose={() => { setViewExpenseModalBudgetId() }} />
+        handleClose={() => { setViewExpenseModalBudgetId()}} />
 
     </>
 

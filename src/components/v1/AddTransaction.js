@@ -1,4 +1,5 @@
-import React, {useContext, useRef, useState} from 'react'
+// import React, {useContext, useRef, useState} from 'react'
+import React, {useContext, useRef} from 'react'
 import { GlobalContext } from './context/GlobalState';
 import { v4 as uuid } from 'uuid';
 
@@ -45,7 +46,7 @@ export default function AddTransaction() {
                     <div className='mb-3'>
                         <label htmlFor='amount' className='form-label'>Amount</label>
                         {/* <input type="number" min={0} step={0.01} required value={amount} onChange={(e)=>setAmount(e.target.value)} id='amount' className='form-control' placeholder="Amount" /> */}
-                        <input type="number" step={0.01} required ref={amount}  id='amount' className='form-control' placeholder="Amount" />
+                        <input type="number" min={0} required ref={amount}  id='amount' className='form-control' placeholder="Amount" />
                     </div>
                     <button className="btn btn-primary mb-3">Add Transaction</button>
                 </div>

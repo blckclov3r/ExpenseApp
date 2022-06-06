@@ -15,7 +15,7 @@ function App() {
         <GlobalProvider>
           <div className="App">
             <Header />
-            <div className='main container'>
+            <div className='main container' id='main'>
               <Routes>
                 <Route exact path="/" element={<MainContainer1 />}></Route>
                 <Route path="v2" element={<MainContainer2 />}></Route>
