@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/blckclov3r.github.io/ExpenseApp/static/css/main.da8ac391.css",
+    "main.js": "/blckclov3r.github.io/ExpenseApp/static/js/main.59c38cc1.js",
+    "index.html": "/blckclov3r.github.io/ExpenseApp/index.html",
+    "main.da8ac391.css.map": "/blckclov3r.github.io/ExpenseApp/static/css/main.da8ac391.css.map",
+    "main.59c38cc1.js.map": "/blckclov3r.github.io/ExpenseApp/static/js/main.59c38cc1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da8ac391.css",
+    "static/js/main.59c38cc1.js"
+  ]
+}
