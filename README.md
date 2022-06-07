@@ -1,4 +1,4 @@
-# 😊 CartoonApp made with React
+# 😊 ExpenseApp made with React
 
 Demo: https://blckclov3r.github.io/ExpenseApp
 
