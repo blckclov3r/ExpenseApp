@@ -16,8 +16,6 @@ export const KEY = {
 
 export const BudgetProvider = ({children}) =>{
 
-    
-
     const [budgets, setBudgets] = useLocalStorage(KEY.BUDGETS,[]);
     const [expenses, setExpenses] = useLocalStorage(KEY.EXPENSES,[]);
 

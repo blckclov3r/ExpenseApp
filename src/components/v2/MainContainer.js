@@ -2,7 +2,7 @@
 
 
 import React, { useState } from 'react'
-import { Container, Stack, Button } from 'react-bootstrap'
+import { Container, Stack, Button, Row } from 'react-bootstrap'
 import AddBudgetModal from './components/AddBudgetModal'
 import AddExpenseModal from './components/AddExpenseModal'
 import BudgetCard from './components/BudgetCard'
@@ -32,10 +32,15 @@ export default function MainContainer() {
           <Button variant="primary" className="ms-auto" onClick={() => { setBudgetModal(true) }}>Add Budget</Button>
           <Button variant="warning" onClick={openAddExpenseModal}>Add Expense</Button>
         </Stack>
-        <div style={{
+        {/* <div style={{
           display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
           gap: "1rem", alignItems: "flex-start"
         }}>
+         
+        </div> */}
+
+        <Row>
+      
           {budgets.map((item) => {
             const amount = getBudgetExpenses(item.id)
             const totalAmount = amount.reduce((accum, itr) => {
@@ -52,7 +57,8 @@ export default function MainContainer() {
           })}
           <UncategorizedBudgetCard onAddExpenseClick={openAddExpenseModal} viewExpenseClick={() => setViewExpenseModalBudgetId(KEY.UNCATEGORIZED)} />
           <TotalBudget />
-        </div>
+      
+        </Row>
 
 
       </Container>

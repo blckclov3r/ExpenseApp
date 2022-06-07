@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, ProgressBar, Stack, Button } from 'react-bootstrap'
+import { Card, ProgressBar, Stack, Button, Col } from 'react-bootstrap'
 import { currencyFormatter } from '../../utils'
 
 export default function BudgetCard({name, amount, max, onAddExpenseClick, gray, hideBtn,viewExpenseClick}) {
@@ -29,6 +29,7 @@ export default function BudgetCard({name, amount, max, onAddExpenseClick, gray, 
 
   return (
     <>
+        <Col xs={12} sm={6} md={4} lg={3} className='mb-2'>
         <Card>
             <Card.Body className={classNames.join(' ')}>
                 <Card.Title className='d-flex align-items-baseline fw-normal'>
@@ -50,6 +51,7 @@ export default function BudgetCard({name, amount, max, onAddExpenseClick, gray, 
                 
             </Card.Body>
         </Card>
+        </Col>
     </>
   )
 }
