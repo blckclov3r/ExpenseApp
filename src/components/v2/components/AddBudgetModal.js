@@ -31,7 +31,7 @@ export default function AddBudgetModal({ show, handleClose }) {
             <Form.Control type="text" ref={nameRef} placeholder="Name" required />
           </Form.Group>
           <Form.Group controlId="max" className='mb-2'>
-            <Form.Label>Maximum Spending</Form.Label>
+            <Form.Label>Amount</Form.Label>
             <Form.Control type="number" ref={maxRef} placeholder="Spend" min={0} step={0.01} required />
           </Form.Group>
         </Modal.Body>

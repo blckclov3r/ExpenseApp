@@ -20,7 +20,7 @@ export default function BudgetCard({name, amount, max, onAddExpenseClick, gray, 
        classNames.push('bg-danger','bg-opacity-10','shadow-sm');
    }
    else if(gray){
-    classNames.push('bg-warning','bg-opacity-10','shadow-sm');
+    // classNames.push('bg-secondary','bg-opacity-10','shadow-sm');
    }
    else{
       classNames.push('shadow-sm');
@@ -29,14 +29,14 @@ export default function BudgetCard({name, amount, max, onAddExpenseClick, gray, 
 
   return (
     <>
-        <Col xs={12} sm={6} md={4} lg={3} className='mb-2'>
+        <Col xs={12} sm={12} md={6} lg={4} className='mb-2'>
         <Card>
             <Card.Body className={classNames.join(' ')}>
                 <Card.Title className='d-flex align-items-baseline fw-normal'>
                     <div className='me-auto'>{name}</div>
                     <div className='ms-auto d-flex align-items-baseline'>
                         <span className='me-1'> {currencyFormatter.format(amount)} </span>
-                    { !isNaN(max) &&  <span className='text-mutes fs-6'>/ {currencyFormatter.format(max)}</span> }
+                    { !isNaN(max) &&  <span className='text-mutes fs-6 text-wrap word-wrap'>/ {currencyFormatter.format(max)}</span> }
                      </div>
                 </Card.Title>
                { name !=="Uncategorized" && <ProgressBar className='round-pill' variant={getProgressbar(amount,max)} 
@@ -45,7 +45,7 @@ export default function BudgetCard({name, amount, max, onAddExpenseClick, gray, 
                     now={amount}
                 /> }
                { !hideBtn &&  <Stack direction='horizontal' className='mt-4'>
-                    <Button variant="danger" className="ms-auto" onClick={onAddExpenseClick}>Add Expense</Button>
+                    <Button variant="warning" className="ms-auto" onClick={onAddExpenseClick}>Add Expense</Button>
                     <Button variant="primary  ms-2" onClick={viewExpenseClick}>View Expenses</Button>
                 </Stack>}
                 

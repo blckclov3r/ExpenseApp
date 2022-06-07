@@ -1,18 +1,15 @@
 // import React, {useContext, useRef, useState} from 'react'
-import React, {useContext, useRef, useState} from 'react'
-import { GlobalContext } from './context/GlobalState';
+import React, {useRef, useState} from 'react'
+import {  useGlobal } from './context/GlobalState';
 import { v4 as uuid } from 'uuid';
 
 export default function AddTransaction() {
     
     // const [text, setText] = useState('');
     const [amount, setAmount] = useState('');
-
     const text = useRef();
-
-
-
-    const {addTransaction} = useContext(GlobalContext);
+    
+    const {addTransaction} = useGlobal();
 
     const addTransactionSubmit = (e) =>{
         e.preventDefault();
@@ -24,13 +21,12 @@ export default function AddTransaction() {
         const newTransaction = {
             id: uuid(),
             text: text.current.value,
-            amount: isNaN(parseInt(amount.value)) ? 0 : parseInt(amount.value)
+            amount: isNaN(parseInt(amount)) ? 0 : parseInt(amount)
         }
         addTransaction(newTransaction);
         // setText('');
-        // setAmount('')
+        setAmount('')
         text.current.value = '';
-        amount.value = ''
     }
     
     return (
@@ -41,7 +37,7 @@ export default function AddTransaction() {
                     <div className='mb-3'>
                         <label htmlFor='text' className='form-label'>Text</label>
                         {/* <input type="text" id='text' required value={text} onChange={(e)=>{setText(e.target.value)}} className='form-control' placeholder="Text" /> */}
-                        <input maxLength={20} type="text" id='text' required ref={text} className='form-control' placeholder="Text" />
+                        <input maxLength={26} type="text" id='text' required ref={text} className='form-control' placeholder="Text" />
                     </div>
                     <div className='mb-3'>
                         <label htmlFor='amount' className='form-label'>Amount</label>
@@ -51,7 +47,7 @@ export default function AddTransaction() {
                                     const limit = 6;
                                     setAmount(e.target.value.slice(0,limit))
                                }
-                        }  min={0} required   id='amount' className='form-control' placeholder="Amount" />
+                        }   required   id='amount' className='form-control' placeholder="Amount" />
                     </div>
                     <button className="btn btn-primary mb-3">Add Transaction</button>
                 </div>

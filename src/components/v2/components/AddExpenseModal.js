@@ -1,12 +1,15 @@
 
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Form, Modal, Button } from 'react-bootstrap'
 import { KEY, useBudgets } from '../context/BudgetContext';
 
 export default function AddExpenseModal({ show, handleClose, defaultBudgetId }) {
 
   const descriptionRef = useRef();
-  const amountRef = useRef();
+
+  // const amountRef = useRef();
+  const [amount,setAmount] = useState('');
+
   const budgetIdRef = useRef();
 
 
@@ -14,14 +17,19 @@ export default function AddExpenseModal({ show, handleClose, defaultBudgetId }) 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     addExpenses({
 
       description: descriptionRef.current.value,
-      amount: parseFloat(amountRef.current.value),
+      amount: parseFloat(amount),
       budgetId: budgetIdRef.current.value
-    })
-    handleClose()
+    });
+    setAmount('');
+    handleClose();
+  }
+
+  const amountVal = (val) =>{
+    const limit = 6;
+    setAmount(val.slice(0,limit));
   }
   
   return (
@@ -36,8 +44,8 @@ export default function AddExpenseModal({ show, handleClose, defaultBudgetId }) 
             <Form.Control type="text" ref={descriptionRef} placeholder="Name" required />
           </Form.Group>
           <Form.Group controlId="amount" className='mb-2'>
-            <Form.Label>Maximum Spending</Form.Label>
-            <Form.Control type="number" ref={amountRef} placeholder="Amount" min={0} step={0.01} required />
+            <Form.Label>Amount</Form.Label>
+            <Form.Control type="number"  value={amount} onChange={(e)=>{amountVal(e.target.value)}} placeholder="Amount" min={0} step={0.01} required />
           </Form.Group>
           <Form.Group controlId="budgetId" className='mb-2'>
             <Form.Label>Budget</Form.Label>
