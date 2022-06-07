@@ -16,7 +16,7 @@ let student1 = new Student('Marcus');
 let student2 = new Student('John');
 
 student1.study();  
-student1.study();  
+student1.report();  
 
 
 
