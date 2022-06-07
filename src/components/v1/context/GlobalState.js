@@ -22,10 +22,17 @@ export function useGlobal(){
 const initialState = {
 
     transactions: [
-        // {id: 1, text: 'Flower', amount: -20},
-        // {id: 2, text: 'Salary', amount: 300},
-        // {id: 3, text: 'Book', amount: -10},
-        // {id: 4, text: 'Camera', amount: 150}
+        {id: 1, text: 'Load', amount: -20},
+        {id: 1, text: 'Load', amount: -60},
+        {id: 1, text: 'Load', amount: -20},
+        {id: 1, text: 'Load', amount: -20},
+        {id: 1, text: 'Load', amount: -90},
+        {id: 1, text: 'Load', amount: -70},
+        {id: 1, text: 'Load', amount: -110},
+        {id: 2, text: 'Load', amount: -300},
+        {id: 3, text: 'Load', amount: -10},
+        {id: 4, text: 'GCASH', amount: 1000},
+        {id: 5, text: 'PAYMAYA', amount: 200}
     ]
 }
 

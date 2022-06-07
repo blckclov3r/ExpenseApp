@@ -61,7 +61,7 @@ export default function MainContainer() {
                     </Row>
                 </Col>
                 <Col md={4} className='h-100'>
-                    <h3 className='mt-4'>History</h3>
+                    <h3 className='mt-lg-4 mt-sm-0'>History</h3>
                         <TransactionList   />
                 </Col>
             </Row>
