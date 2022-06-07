@@ -6,6 +6,7 @@ export default function TransactionList() {
 
     const {transactions} = useContext(GlobalContext);
 
+
     return (
         <>
             <div id='transactionList' className='h-100' >
