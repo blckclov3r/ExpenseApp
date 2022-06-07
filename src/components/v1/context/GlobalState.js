@@ -23,16 +23,16 @@ const initialState = {
 
     transactions: [
         {id: 1, text: 'Load', amount: -20},
-        {id: 1, text: 'Load', amount: -60},
-        {id: 1, text: 'Load', amount: -20},
-        {id: 1, text: 'Load', amount: -20},
-        {id: 1, text: 'Load', amount: -90},
-        {id: 1, text: 'Load', amount: -70},
-        {id: 1, text: 'Load', amount: -110},
-        {id: 2, text: 'Load', amount: -300},
-        {id: 3, text: 'Load', amount: -10},
-        {id: 4, text: 'GCASH', amount: 1000},
-        {id: 5, text: 'PAYMAYA', amount: 200}
+        {id: 2, text: 'Load', amount: -60},
+        {id: 3, text: 'Load', amount: -20},
+        {id: 4, text: 'Load', amount: -20},
+        {id: 5, text: 'Load', amount: -90},
+        {id: 6, text: 'Load', amount: -70},
+        {id: 7, text: 'Load', amount: -110},
+        {id: 8, text: 'Load', amount: -300},
+        {id: 9, text: 'Load', amount: -10},
+        {id: 10, text: 'GCASH', amount: 1000},
+        {id: 11, text: 'PAYMAYA', amount: 200}
     ]
 }
 

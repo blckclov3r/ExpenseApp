@@ -4,7 +4,6 @@ import React, { useContext } from 'react'
 import { currencyFormatter } from '../utils';
 import { GlobalContext } from './context/GlobalState'
 
-
 export default function Transaction({ item }) {
 
     const { deleteTransaction } = useContext(GlobalContext);
@@ -14,7 +13,7 @@ export default function Transaction({ item }) {
 
     return (
         <>
-            <li key={item.id} className={item.amount < 0 ? 'list-group-item align-items-center d-flex justify-content-between  mb-1 shadow-sm' : 'list-group-item align-items-center d-flex justify-content-between mb-1 shadow-sm '}>
+            <li  className={item.amount < 0 ? 'list-group-item align-items-center d-flex justify-content-between  mb-1 shadow-sm' : 'list-group-item align-items-center d-flex justify-content-between mb-1 shadow-sm '}>
                 <p className='mb-0'>{item.text} <span className={sign === '+' ? 'ms-2 fw-bold text-success' : 'ms-3 fw-bold text-danger'}>{sign}{currencyFormatter.format(Math.abs(item.amount))}</span> </p>
                 <button className='btn btn-danger btn-sm ms-auto' onClick={() => { deleteTransaction(item.id) }}>
 
