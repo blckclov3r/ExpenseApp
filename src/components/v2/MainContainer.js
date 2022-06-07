@@ -39,7 +39,7 @@ export default function MainContainer() {
          
         </div> */}
 
-        <Row>
+        <Row className='g-3'>
       
           {budgets.map((item) => {
             const amount = getBudgetExpenses(item.id)

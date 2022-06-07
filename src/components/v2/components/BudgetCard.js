@@ -29,7 +29,7 @@ export default function BudgetCard({name, amount, max, onAddExpenseClick, gray, 
 
   return (
     <>
-        <Col xs={12} sm={12} md={6} lg={4} className='mb-2'>
+        <Col xs={12} sm={12} md={6} lg={4} >
         <Card>
             <Card.Body className={classNames.join(' ')}>
                 <Card.Title className='d-flex align-items-baseline fw-normal'>
