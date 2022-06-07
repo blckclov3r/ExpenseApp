@@ -15,11 +15,3 @@ body{
 footer{
     margin-top: auto;
 }
-
-.overflow-y{
-    overflow-y: scroll;
-}
-
-.overflow-hidden{
-    overflow-y: hidden;
-}
