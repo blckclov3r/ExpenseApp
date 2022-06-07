@@ -26,9 +26,9 @@ export default function MainContainer() {
 
   return (
     <>
-      <Container className='my-4'>
+      <div className='my-4'>
         <Stack direction="horizontal" gap="2" className='mb-4'>
-          <h3 className='me-auto'>Budgets</h3>
+          <h3 className='me-auto'>Overview</h3>
           <Button variant="primary" className="ms-auto" onClick={() => { setBudgetModal(true) }}>Add Budget</Button>
           <Button variant="warning" onClick={openAddExpenseModal}>Add Expense</Button>
         </Stack>
@@ -61,7 +61,7 @@ export default function MainContainer() {
         </Row>
 
 
-      </Container>
+      </div>
       <AddBudgetModal show={budgetModal} handleClose={() => { setBudgetModal(false) }} />
       <AddExpenseModal
         show={expenseModal}
