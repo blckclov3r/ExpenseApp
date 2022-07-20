@@ -11,3 +11,6 @@ This is a personal project built in my spare time for learning purposes.
 * ES6
 * React
 * Bootstrap5
+
+## License
+* [MIT](LICENSE)
